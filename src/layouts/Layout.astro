@@ -1,4 +1,7 @@
 ---
+import Footer from "../components/Footer.astro";
+import Nav from "../components/Nav.astro";
+
 interface Props {
 	title: string;
 }
@@ -17,20 +20,23 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
+		<Nav />
 		<slot />
+		<Footer />
 	</body>
 </html>
 <style is:global>
 	:root {
 		color-scheme: light dark;
 		--background: #232323;
-		--primary: #ED5338;
+		--primary: #ed5338;
 		--secondary: #321119;
-		--accent: #FFF;
+		--accent: #fff;
 		--accentwo: #999;
 	}
 
-	html, body {
+	html,
+	body {
 		font-family: "CircularStd";
 		width: 100%;
 		min-height: 100vh;
@@ -52,42 +58,42 @@ const { title } = Astro.props;
 	}
 
 	@font-face {
-        font-family: "CircularStd";
-        src: url("/fonts/CircularStd-Mediuotf") format("woff2");
-        font-weight: 500;
-        font-style: normal;
-        font-display: swap;
-    }
+		font-family: "CircularStd";
+		src: url("/fonts/CircularStd-Mediuotf") format("woff2");
+		font-weight: 500;
+		font-style: normal;
+		font-display: swap;
+	}
 
-    @font-face {
-        font-family: "CircularStd";
-        src: url("/fonts/CircularStd-Book.otf") format("woff2");
-        font-weight: 400;
-        font-style: normal;
-        font-display: swap;
-    }
+	@font-face {
+		font-family: "CircularStd";
+		src: url("/fonts/CircularStd-Book.otf") format("woff2");
+		font-weight: 400;
+		font-style: normal;
+		font-display: swap;
+	}
 
-    @font-face {
-        font-family: "CircularStd";
-        src: url("/fonts/CircularStd-Light.otf") format("woff2");
-        font-weight: 300;
-        font-style: normal;
-        font-display: swap;
-    }
+	@font-face {
+		font-family: "CircularStd";
+		src: url("/fonts/CircularStd-Light.otf") format("woff2");
+		font-weight: 300;
+		font-style: normal;
+		font-display: swap;
+	}
 
-    @font-face {
-        font-family: "CircularStd";
-        src: url("/fonts/CircularStd-Bold.otf") format("woff2");
-        font-weight: 700;
-        font-style: normal;
-        font-display: swap;
-    }
+	@font-face {
+		font-family: "CircularStd";
+		src: url("/fonts/CircularStd-Bold.otf") format("woff2");
+		font-weight: 700;
+		font-style: normal;
+		font-display: swap;
+	}
 
-    @font-face {
-        font-family: "CircularStd";
-        src: url("/fonts/CircularStd-Black.otf") format("woff2");
-        font-weight: 900;
-        font-style: normal;
-        font-display: swap;
-    }
+	@font-face {
+		font-family: "CircularStd";
+		src: url("/fonts/CircularStd-Black.otf") format("woff2");
+		font-weight: 900;
+		font-style: normal;
+		font-display: swap;
+	}
 </style>
