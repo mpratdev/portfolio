@@ -1,3 +1,8 @@
+---
+import HeaderButton from "./HeaderButton.astro";
+import Github from "../../public/icons/Github.astro";
+---
+
 <header>
     <section class="info">
         <section class="header-left">
@@ -7,18 +12,25 @@
         <div class="image"></div>
     </section>
     <!-- contact, github & linkedin buttons -->
+    <section class="anchors">
+        <HeaderButton name="github" href="https://github.com/mpratdev">
+            <Github />
+            GitHub
+        </HeaderButton>
+    </section>
 </header>
 
 <style>
     header {
         height: 200px;
         width: 100%;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
         background: blue;
-        display: flex;
     }
 
-    .header-left {
-        width: 100%;
+    .info {
+        display: flex;
     }
 
     .image {
